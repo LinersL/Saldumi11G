@@ -76,6 +76,7 @@ namespace LL_Saldumi11
                 MessageBox.Show("Nav neviens saldumu veids atlasits");
             }
 
+
         }
         private void Aprekins()
         {
@@ -88,42 +89,48 @@ namespace LL_Saldumi11
         }
 
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Dati_TB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void button2_Click(object sender, EventArgs e)
         {
-            StreamWriter ceks = new StreamWriter(Application.StartupPath + "\\personasD\\" + textBox1 + dateTimePicker1 + " .txt");
-            ceks.WriteLine()
+            string ceksDirectory = Application.StartupPath + "\\Ceks\\";
+            Directory.CreateDirectory(ceksDirectory);
+
+            string fileName = vardsBox1.Text +" "+ dateTimePicker1.Text + " .txt";
+            string filePath = Path.Combine(ceksDirectory, fileName);
+
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                writer.WriteLine(Vards.Text + ": " + vardsBox1.Text);
+                writer.WriteLine(Datums.Text + ": " + dateTimePicker1.Text);
+                writer.WriteLine(Nsumma.Text + ": " + Summa.Text + "€");
+                writer.WriteLine(daudz.Text + ": " + Dati_TB.Text + "kg");
+
+                string selected = "";
+
+                if (checkBox1.Checked)
+                    selected += checkBox1.Text + ", ";
+
+                if (checkBox2.Checked)
+                    selected += checkBox2.Text + ", ";
+
+                if (checkBox3.Checked)
+                    selected += checkBox3.Text;
+
+                if (selected != "")
+                {
+                    selected = selected.TrimEnd(',', ' ');
+                    writer.WriteLine("Salduma izvele: " + selected);
+                }
+                else
+                {
+                    writer.WriteLine("Nav neviens saldumu veids atlasits");
+                }
+
+            }
 
         }
+       
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
