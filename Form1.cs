@@ -32,50 +32,47 @@ namespace LL_Saldumi11
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            CENAS();
+            Aprekins();
+        }
+        private void CENAS()
+        {
             if (checkBox1.Checked == true && checkBox2.Checked == true && checkBox3.Checked == true)
             {
                 cena = 20.3;
-                Aprekins();
-
             }
             else if (checkBox1.Checked == true && checkBox2.Checked == true && checkBox3.Checked == false)
             {
                 cena = 16.1;
-                Aprekins();
 
             }
             if (checkBox1.Checked == true && checkBox2.Checked == false && checkBox3.Checked == true)
             {
                 cena = 14.08;
-                Aprekins();
-
+               
             }
             else if (checkBox1.Checked == false && checkBox2.Checked == true && checkBox3.Checked == true)
             {
                 cena = 10.42;
-                Aprekins();
-
+              
             }
             if (checkBox1.Checked == false && checkBox2.Checked == false && checkBox3.Checked == true)
             {
                 cena = 4.20;
-                Aprekins();
             }
             else if (checkBox1.Checked == true && checkBox2.Checked == false && checkBox3.Checked == false)
             {
                 cena = 9.88;
-                Aprekins();
             }
             if (checkBox1.Checked == false && checkBox2.Checked == true && checkBox3.Checked == false)
             {
                 cena = 6.22;
-                Aprekins();
             }
             if (checkBox1.Checked == false && checkBox2.Checked == false && checkBox3.Checked == false)
             {
                 MessageBox.Show("Nav neviens saldumu veids atlasits");
             }
-
 
         }
         private void Aprekins()
@@ -83,7 +80,11 @@ namespace LL_Saldumi11
 
             double sk1 = Convert.ToDouble(Summa.Text);
             double dati = sk1 / cena;
-            double rezultats = Math.Round(dati, 2);
+            if (dati <= 0)
+            {
+                MessageBox.Show("!!TEV NAV NAUDAS!!");
+            }
+            double rezultats = Math.Round(dati, 3);
             Dati_TB.Text = rezultats.ToString();
 
         }
