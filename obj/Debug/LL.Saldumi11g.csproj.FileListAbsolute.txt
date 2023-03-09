@@ -1,0 +1,10 @@
+C:\Users\liner\source\repos\LL.Saldumi11g\LL.Saldumi11g\obj\Debug\LL.Saldumi11g.csproj.AssemblyReference.cache
+C:\Users\liner\source\repos\LL.Saldumi11g\LL.Saldumi11g\obj\Debug\LL_Saldumi11.Form1.resources
+C:\Users\liner\source\repos\LL.Saldumi11g\LL.Saldumi11g\obj\Debug\LL.Saldumi11g.Properties.Resources.resources
+C:\Users\liner\source\repos\LL.Saldumi11g\LL.Saldumi11g\obj\Debug\LL.Saldumi11g.csproj.GenerateResource.cache
+C:\Users\liner\source\repos\LL.Saldumi11g\LL.Saldumi11g\obj\Debug\LL.Saldumi11g.csproj.CoreCompileInputs.cache
+C:\Users\liner\source\repos\LL.Saldumi11g\LL.Saldumi11g\bin\Debug\LL.Saldumi11g.exe.config
+C:\Users\liner\source\repos\LL.Saldumi11g\LL.Saldumi11g\bin\Debug\LL.Saldumi11g.exe
+C:\Users\liner\source\repos\LL.Saldumi11g\LL.Saldumi11g\bin\Debug\LL.Saldumi11g.pdb
+C:\Users\liner\source\repos\LL.Saldumi11g\LL.Saldumi11g\obj\Debug\LL.Saldumi11g.exe
+C:\Users\liner\source\repos\LL.Saldumi11g\LL.Saldumi11g\obj\Debug\LL.Saldumi11g.pdb
